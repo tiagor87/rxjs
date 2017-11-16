@@ -1,0 +1,14 @@
+{
+  "name": "rxjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:tiagor87/rxjs.git",
+  "author": "Tiago Resende <tiago@nibo.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "rxjs": "^5.5.2"
+  },
+  "devDependencies": {
+    "@types/rx": "^4.1.1"
+  }
+}
