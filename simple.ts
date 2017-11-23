@@ -42,24 +42,9 @@ export let simple$: Observable<string> = Rx.Observable.create((o: Rx.Observer<st
 //     .subscribe(value => console.log(value), error => console.log(error), () => console.log('complete'));
 
 // simple$.filter(value => value === 'Hello').subscribe(value => console.log(value));
-interface IEvent {
-    data?: any;
-}
-class InsertEvent implements IEvent {
-    data = {
-        id: 1
-    }
-};
-class UpdateEvent implements IEvent {
-    data: null;
-}
-export let event$: Observable<IEvent> = Rx.Observable.create((o: Rx.Observer<IEvent>) => {
-    o.next(new InsertEvent());
-    o.next(new UpdateEvent());
-    o.complete();
-});
+// export let event$: Observable<number> = Rx.Observable.interval(1000);
 
-event$.subscribe(event => console.log('all', event));
-event$.filter(event => event instanceof UpdateEvent).subscribe(event => console.log('update', event));
-event$.filter(event => event instanceof InsertEvent).subscribe(event => console.log('insert', event));
+// event$.subscribe(event => console.log('all', event));
+// event$.filter(value => value % 2 === 0).subscribe(value => console.log('par:', value));
+// event$.filter(value => value % 2 !== 0).subscribe(value => console.log('impar', value));
 
